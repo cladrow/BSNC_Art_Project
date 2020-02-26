@@ -1,0 +1,22 @@
+USE [489_BAMS]
+GO
+
+/****** Object:  Table [dbo].[Recipient]    Script Date: 2/25/2020 7:19:44 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Recipient](
+	[Recipientid] [int] NOT NULL,
+	[FName] [varchar](50) NOT NULL,
+	[LName] [varchar](50) NOT NULL,
+	[Phone] [varchar](12) NOT NULL,
+	[Address1] [varchar](50) NULL,
+	[Address2] [varchar](50) NULL,
+	[City] [varchar](20) NULL,
+	[State] [varchar](20) NULL,
+	[Zip] [nchar](10) NULL
+) ON [PRIMARY]
+GO
