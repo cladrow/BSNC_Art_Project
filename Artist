@@ -1,0 +1,39 @@
+USE [489_BAMS]
+GO
+
+/****** Object:  Table [dbo].[Artist]    Script Date: 2/25/2020 7:19:02 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Artist](
+	[ArtistID] [int] IDENTITY(1,1) NOT NULL,
+	[LName] [varchar](50) NOT NULL,
+	[FName] [varchar](50) NOT NULL,
+	[Phone] [varchar](50) NOT NULL,
+	[Address1] [varchar](50) NOT NULL,
+	[Address2] [varchar](50) NOT NULL,
+	[City] [varchar](50) NOT NULL,
+	[State] [varchar](50) NOT NULL,
+	[Zip] [varchar](10) NOT NULL,
+	[Shareholder] [bit] NOT NULL,
+ CONSTRAINT [PK_Artist] PRIMARY KEY CLUSTERED 
+(
+	[ArtistID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Artist]  WITH CHECK ADD  CONSTRAINT [FK_Artist_Artist] FOREIGN KEY([ArtistID])
+REFERENCES [dbo].[Artist] ([ArtistID])
+GO
+
+ALTER TABLE [dbo].[Artist] CHECK CONSTRAINT [FK_Artist_Artist]
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Y/N' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Artist', @level2type=N'COLUMN',@level2name=N'Shareholder'
+GO
+
+
