@@ -1,0 +1,22 @@
+USE [489_BAMS]
+GO
+
+/****** Object:  Table [dbo].[images]    Script Date: 2/25/2020 7:19:17 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[images](
+	[Imageid] [nchar](10) NOT NULL,
+	[Artid] [nchar](10) NULL,
+	[url] [nchar](10) NULL,
+ CONSTRAINT [PK_images] PRIMARY KEY CLUSTERED 
+(
+	[Imageid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
