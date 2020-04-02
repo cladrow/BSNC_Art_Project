@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Move Form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+  <body>
+    <div class="logo"></div>
+    <h1 align="center">Move Form</h1>
+      <form method="POST">
+        <br>
+        <div class="box">
+                <h2>Art Location Information</h2>
+          <section class="Art Location Information">
+              <label for="LocationID">Current Location ID</label>
+              <input type="number" class="inputbx" name="LocationID" id="LocationID" min="0" max="9999999">
+              <br>
+              <label for="ArtID">Art ID</label>
+              <input type="number"  class="inputbx" name="ArtID" id="ArtID" min="0" max="9999999">
+          </section>
+<!-- Basic submission button for the results-->
+        <hr>
+          <section class="submission">
+              <input type="Search Location"  class="inputbx" value="Search Location">
+          </section>
+<!-- JavaScript for Move Form Output (Image, ArtID, Title, Description(optional))-->
+<!-- confirm Y/N -->
+          <section class="Confirm Y/N">
+            <br>
+            <label for="Confirm">Confirm</label>
+            <input type="checkbox" name="Confirm" id="Confirm">
+            <br>
+          </section>
+<!-- Art New Location Information-->
+      <h2>Art New Location Information</h2>
+        <section class="Art New Location Information">
+          <label for="City">City</label> <br>
+            <select name="City" class="inputbx" id="City" required>
+              <option value="Anchorage">Anchorage</option>
+              <option value="Nome">Nome</option>
+            </select>
+            <br>
+          <label for="Building">Building</label>
+            <select name="Building" class="inputbx" id="Building" required>
+              <option value="Anchorage">Anchorage1</option>
+              <option value="Nome">Nome1</option>
+            </select>
+            <br>
+          <label for="Floor">Floor</label>
+          <input type="number" class="inputbx" name="Floor" id="Floor" min="1" max="9999999" required>
+          <br>
+          <label for="Room">Room</label>
+          <input type="number" class="inputbx" name="Room" id="Room" min="1" max="9999999" required>
+          <br>
+          <label for="Description">Any extra information?</label>
+            <textarea id="Description" class="inputbx" name="Description" rows="3" cols="40"></textarea>
+          </section>
+<!-- Basic submission button-->
+          <hr>
+          <section class="submission">
+              <input type="submit" class="button" value="Submit">
+          </section>
+        </form>
+          <script src="move-form.js"></script>
+              </body>
+</div>
+
+</html>
+</body>
+
+</html>
